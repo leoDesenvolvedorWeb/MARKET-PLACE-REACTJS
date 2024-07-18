@@ -9,13 +9,13 @@ const ProductList = () => {
       {/* Menu de categoria*/}
 
       <div className='flex items-center justify-center space-x-6'>
-        <p className={categoriaTab === 'Hamburguer' ? 'active-menu-tab bg-primary' : 'menu-tab'} onclick={() => setCategoriaTab('Hamburguer')}>Hamburguer</p>
-        <p className={categoriaTab === 'Brasileira' ? 'active-menu-tab bg-primary' : 'menu-tab'} onclick={() => setCategoriaTab('Brasileira')} >Brasileira</p>
-        <p className={categoriaTab === 'Japonesa' ? 'active-menu-tab bg-primary' : 'menu-tab'} onclick={() => setCategoriaTab('Japonesa')} >Japonesa</p>
+        <p className={categoriaTab === 'Hamburguer' ? "active-menu-tab bg-primary" : "menu-tab"} onClick={() => setCategoriaTab('Hamburguer')}>Hamburguer</p>
+        <p className={categoriaTab === 'Brasileira' ? "active-menu-tab bg-primary" : "menu-tab"} onClick={() => setCategoriaTab('Brasileira')} >Brasileira</p>
+        <p className={categoriaTab === 'Japonesa' ? "active-menu-tab bg-primary" : "menu-tab"} onClick={() => setCategoriaTab('Japonesa')} >Japonesa</p>
 
       </div>
       {/* lista de produtos*/}
-    <div className=''>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
       <Product/>
     </div>
 
