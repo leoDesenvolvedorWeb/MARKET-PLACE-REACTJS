@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../assets/hambuger.png';
+// import image from '../../assets/hambuger.png';
 
 const Product = ( {product} ) => {
   return (
