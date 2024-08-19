@@ -12,11 +12,10 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
       const userInfo = localStorage.getItem('userInfo');
 
+      
+      //Useinfo setUserLogged estiver true aparece o nosso carrinho e nome de usuário
       if(userInfo) {
         setUserLogged(true);
-        alert('usuario logado')
-      }else {
-        alert('usuario nao logado');
       }
 
     }, [])
