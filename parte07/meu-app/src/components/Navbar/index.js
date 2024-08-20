@@ -7,7 +7,7 @@ import { BsFillCartFill } from 'react-icons/bs';
 import { MdLogout } from 'react-icons/md';
 
 const Navbar = () => {
-  const { userLogged } = useContext(AuthContext);
+  const { userLogged, logoutUser } = useContext(AuthContext);
   const navigate = useNavigate(); 
   console.log(`valor do contexto`, userLogged);
 
@@ -26,8 +26,8 @@ const Navbar = () => {
                   <BsFillCartFill className='w-6 h-6 cursor-pointer'/>
                 </div>
                 <img src='' alt='' />
-                <p className='text-gray-700'>Nome usuário</p>
-                <MdLogout className='w-6 h-6 cursor-pointer' />
+                <p className='text-gray-700'>Bem Vindo, Nome usuário !</p>
+                <MdLogout className='w-6 h-6 cursor-pointer ' onClick={logoutUser} />
               </div>
             ) : (
               //Caso meu usuário não estiver logado vai estar com as informações de somente login e registro
