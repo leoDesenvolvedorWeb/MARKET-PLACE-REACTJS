@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 import { createContext  } from 'react';
-import { useState  } from 'react';
-import { useNavigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
