@@ -33,7 +33,7 @@ const Navbar = () => {
               //Caso meu usuário não estiver logado vai estar com as informações de somente login e registro
               <div className='flex items-center justify-end space-x-6'>
                 <button onClick={() => navigate('/login')}>Login</button>
-                <button className='bg-primary px-6 text-white rounded-full transition duration-700 hover:scale-105'>Register</button>
+                <button onClick={() => navigate('/register')} className='bg-primary px-6 text-white rounded-full transition duration-700 hover:scale-105'>Register</button>
 
               </div>
 
