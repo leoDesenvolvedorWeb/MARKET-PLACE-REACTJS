@@ -5,7 +5,7 @@ import useAuth from '../hooks/useAuth';
 const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     //importando informações do useAuth
-    const {userLogged, loading, loginUser, logoutUser} = useAuth();
+    const {userLogged, userFull, loading, loginUser, logoutUser} = useAuth();
 
     //ProtectedRoute se caso usuário estiver logado acesso à página home se não estiver logado entra no loading e não ver a página home
     if(loading) {
@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     }
 
   return (
-      <AuthContext.Provider value={{userLogged, loginUser, logoutUser}}>
+      <AuthContext.Provider value={{userLogged, userFull, loginUser, logoutUser}}>
         { children }
     </AuthContext.Provider>
   )

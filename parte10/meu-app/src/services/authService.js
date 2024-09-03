@@ -10,5 +10,10 @@ const registerUser = (addUserValues) =>
         .then((response) => response)
         .catch((err) => console.error('Erro na chamada', err));
     
-
-export { loginUserApi, registerUser }
+const getUserById = (idUser) => {
+    console.log(idUser);
+    return api.get(`/usuario/findById/${idUser}`)      
+        .then(response => response)
+        .catch((err) => err);
+}
+export { loginUserApi, registerUser, getUserById }
