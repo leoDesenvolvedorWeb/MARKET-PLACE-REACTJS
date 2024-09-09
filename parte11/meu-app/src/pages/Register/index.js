@@ -24,6 +24,14 @@ const Register = () => {
   const handleSubmit = async (evento) => {
     evento.preventDefault();
     const response = await registerUser(inputValues);
+    loginUserApi().then(response => {
+      if (response && response.data) {
+          // Acesse os dados aqui
+      }
+  }).catch(error => {
+      console.error('Erro na chamada:', error);
+      // Lide com o erro adequadamente aqui
+  });
     if(response.data) {
       alert(`Usuário ${response.data.nome} cadastrado com sucesso!`)
       navigate('/login')
