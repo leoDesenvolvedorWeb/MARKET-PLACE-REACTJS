@@ -4,6 +4,7 @@ const loginUserApi = (userValues ) =>
     api.post('/auth/login', userValues)
         .then((response) => response)
         .catch((err) => console.error('Erro na chamada', err));
+        console.log
 
 const registerUser = (addUserValues) =>
     api.post('/usuario/create', addUserValues)      
