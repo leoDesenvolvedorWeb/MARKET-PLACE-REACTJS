@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '../../assets/logo.png';
 import { registerUser } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
+import { loginUserApi } from '../../services/authService';
 
 const Register = () => {
   const [inputValues, setInputValues] = useState({

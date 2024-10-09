@@ -7,7 +7,7 @@ import { BsFillCartFill } from 'react-icons/bs';
 import { MdLogout } from 'react-icons/md';
 
 const Navbar = () => {
-  const { userLogged, userFull, logoutUser } = useContext(AuthContext);
+  const { userLogged, logoutUser } = useContext(AuthContext);
   const navigate = useNavigate(); 
   console.log(`valor do contexto`, userLogged);
 

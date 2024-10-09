@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import { AuthContext } from '../../context/AuthContext';
 
@@ -8,8 +8,9 @@ const Login = () => {
     email: '',
     senha: ''
   })
-  const { loginUser } = useContext(AuthContext)
-  const navigate = useNavigate();
+  const { loginUser } = useContext(AuthContext);
+  //const navigate = useNavigate();
+
 
   const handleChangeValues = (evento) => {
     setInputValues({
@@ -47,7 +48,7 @@ const Login = () => {
         </form>
     </div>
     </main>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

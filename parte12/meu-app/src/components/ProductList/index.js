@@ -4,7 +4,7 @@ import productsMock from '../../mock/products';
 
 const ProductList = () => {
   const [categoriaTab, setCategoriaTab] = useState ('Hamburguer');
-  const [products, setProducts] = useState(productsMock);
+  const [products] = useState(productsMock);
 
   return (
     <section className='my-12 max-w-screen-xl mx-auto px-3'>
