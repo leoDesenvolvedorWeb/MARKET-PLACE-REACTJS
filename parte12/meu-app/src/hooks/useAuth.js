@@ -13,6 +13,7 @@ const useAuth = () => {
       //Useinfo setUserLogged estiver true aparece o nosso carrinho e nome de usuário
       useEffect(() => {
         const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        console.log(userInfo)
         if(userInfo) {
           // api.defaults.headers.common['Authorization'] = `Bearer ${userInfo.token}`
           findUserById(userInfo.id); //
@@ -25,7 +26,7 @@ const useAuth = () => {
       }, []);
 
       //ProtectedRoute se caso usuário estiver logado acesso à página home se não estiver logado entra no loading e não ver a página home
-      async function loginUser(inputValues) {
+    async function loginUser(inputValues) {
     const response = await loginUserApi(inputValues);
     const data = await response.data;
     localStorage.setItem('userInfo', JSON.stringify(data));

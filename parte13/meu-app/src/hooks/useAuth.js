@@ -13,9 +13,10 @@ const useAuth = () => {
       //Useinfo setUserLogged estiver true aparece o nosso carrinho e nome de usuário
       useEffect(() => {
         const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        console.log(userInfo)
         if(userInfo) {
-          api.defaults.headers.common['Authorization'] = `Bearer ${userInfo.token}`;
-          findUserById(userInfo.id);
+          api.defaults.headers.common['Authorization'] = `Bearer ${userInfo.token}`
+          findUserById(userInfo.id); //
           setUserLogged(true);
         }
         setLoading(false)
@@ -25,12 +26,12 @@ const useAuth = () => {
       }, []);
 
       //ProtectedRoute se caso usuário estiver logado acesso à página home se não estiver logado entra no loading e não ver a página home
-    const loginUser = async  (inputValues) => {
+    const loginUser = async (inputValues) => {
     const response = await loginUserApi(inputValues);
     const data = await response.data;
     localStorage.setItem('userInfo', JSON.stringify(data));
-    api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
-    navigate('/');
+    api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
+    navigate('/')
     setUserLogged(true);
     //localStorage Precisamos salvar nossas informações em um tipo de casch o próprio browser tem um, com o nome de localstorage e ele não inspira somente quando limpamos o cache do aplicativo podemos desligar o computador ligar novamente que usuário vai continuar logado localbrawser.
   }
@@ -44,7 +45,7 @@ const useAuth = () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       const findUserById = async (idUser) => {
         const response = await getUserById(idUser);
-        setUserFull(response.data);
+        setUserFull(response.data)
         console.log(userFull);
       }
   
