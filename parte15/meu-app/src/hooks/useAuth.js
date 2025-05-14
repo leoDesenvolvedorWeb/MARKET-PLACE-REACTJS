@@ -29,6 +29,7 @@ const useAuth = () => {
     const loginUser = async (inputValues) => {
     const response = await loginUserApi(inputValues);
     const data = await response.data;
+    setUserId(response.data.id);
     localStorage.setItem('userInfo', JSON.stringify(data));
     api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
     navigate('/')
