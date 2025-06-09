@@ -2,9 +2,13 @@ import React from 'react'
 
 const Admin = () => {
   return (
-    <div>
-      <p>Admin</p>
-    </div>
+    <section className='my-12 max-w-screen-xl mx-auto px-6'>
+      <div className=''>
+
+
+      </div>
+
+    </section>
   )
 }
 
