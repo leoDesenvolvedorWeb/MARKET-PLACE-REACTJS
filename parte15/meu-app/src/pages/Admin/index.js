@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaEdit } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
-import { findAllProducts, deleteProduct } from "../../services/productService";
+// import { findAllProducts, deleteProduct } from "../../services/productService";
 
 const Admin = () => {
   const [products, setProducts] = useState([])
@@ -13,14 +13,14 @@ const Admin = () => {
   }, [])
 
   const getAllProducts = async() => {
-    const response = await findAllProducts();
-    setProducts(response.data);
+    //const response = await findAllProducts();
+    //setProducts(response.data);
   }
 
   const removeProduct = async (id) => {
     const answer = window.confirm('Deseja excluir o produto ?')
     if(answer) {
-      await deleteProduct(id);
+      //await deleteProduct(id);
       getAllProducts();
     }
   }
