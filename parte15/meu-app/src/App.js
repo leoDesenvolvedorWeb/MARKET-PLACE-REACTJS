@@ -7,6 +7,7 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './routes/ProtectedRoute';
 import Register from './pages/Register/index';
 import Admin from './pages/Admin';
+import AddProduct from './pages/AddProduct';
 
 // AuthProvider Variavel compartilhada com todos os componente dentro
 
@@ -26,6 +27,11 @@ function App() {
           <Route path='/admin' element={
             <ProtectedRoute>
               <Admin />
+            </ProtectedRoute>
+          }/>
+          <Route path='/add-product' element={
+            <ProtectedRoute>
+              <AddProduct />
             </ProtectedRoute>
           }/>
       </Routes>
