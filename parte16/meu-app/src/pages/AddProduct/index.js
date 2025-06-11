@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const AddProduct = () => {
-    const [productForm, setProductForm] = useState({
+  const [productForm, setProductForm] = useState({
     nome: "",
     descricao: "",
     precoUnitario: 0,
@@ -9,7 +9,6 @@ const AddProduct = () => {
     codigoBarra: 0,
     categorias: [{ _id: "" }],
   })
-
 
     return (
     <section className="my-12 max-w-screen-xl mx-auto px-6">
